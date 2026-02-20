@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "urbanicity"
+version = "0.1.0"
+description = "OSM-derived H3 urbanicity layers for US cities"
+requires-python = ">=3.11"
+dependencies = [
+    "osmnx>=1.9",
+    "networkx>=3.2",
+    "geopandas>=0.14",
+    "shapely>=2.0",
+    "pyproj>=3.6",
+    "h3>=3.7,<4",
+    "pandas>=2.1",
+    "numpy>=1.26",
+    "pyarrow>=14.0",
+]
+
+[project.scripts]
+urbanicity = "urbanicity.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["urbanicity*"]

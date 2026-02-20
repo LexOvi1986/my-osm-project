@@ -1,0 +1,20 @@
+# OSM cache and generated outputs (large files, reproducible)
+cache/
+outputs/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+dist/
+build/
+*.egg
+.venv/
+venv/
+env/
+
+# IDE
+.DS_Store
+.idea/
+.vscode/
